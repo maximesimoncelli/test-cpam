@@ -1,0 +1,21 @@
+{
+  "name": "test-cpam",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "src/main.ts",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@types/lodash.random": "^3.2.9",
+    "@types/node": "^26.1.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "lodash": "^4.18.1"
+  }
+}
