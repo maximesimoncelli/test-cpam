@@ -1,7 +1,22 @@
 {
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "**/*.test.ts"
+    ],
     "compilerOptions": {
+        "outDir": "./dist",
         "types": [
             "node"
-        ]
+        ],
+        "paths": {
+            "@/": [
+                "./src/"
+            ],
+            "@types/": [
+                "./types/"
+            ]
+        }
     }
 }

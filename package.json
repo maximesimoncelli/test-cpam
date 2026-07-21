@@ -1,21 +1,31 @@
 {
   "name": "test-cpam",
   "version": "1.0.0",
-  "description": "",
-  "license": "ISC",
-  "author": "",
+  "license": "MIT",
+  "author": "Maxime Simoncelli <maximesimoncelli@gmail.com>",
   "type": "module",
   "main": "src/main.ts",
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "lint": "npx @biomejs/biome check --write",
+    "build": "tsc",
+    "start": "node dist/src/main.js"
   },
   "devDependencies": {
-    "@types/lodash.random": "^3.2.9",
-    "@types/node": "^26.1.1",
+    "@biomejs/biome": "2.5.4",
     "@vitest/coverage-v8": "^4.1.10",
     "vitest": "^4.1.10"
   },
   "dependencies": {
-    "lodash": "^4.18.1"
+    "@types/lodash.random": "^3.2.9",
+    "@types/node": "^26.1.1",
+    "lodash": "^4.18.1",
+    "typescript": "^7.0.2"
+  },
+  "allowScripts": {
+    "core-js@2.6.12": true
   }
 }

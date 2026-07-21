@@ -17,33 +17,39 @@
  * Then we print the number to the console
  */
 
-import _ from "lodash";
-import { writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { returnCorrectMessage } from "./print-correct-message.ts";
+import _ from "lodash";
+import { returnCorrectMessage } from "./print-correct-message.js";
+
 const { range, shuffle } = _;
 const OUTPUTS = {
-  OUTPUTS_DIR: "./outputs",
-  FILENAME: "pattatras.csv",
+	OUTPUTS_DIR: "./outputs",
+	FILENAME: "pattatras.csv",
 };
 
 export const shuffledRangeOfNumber = shuffle(range(1, 6458));
 
 shuffledRangeOfNumber.forEach((currentNumber) => {
-  console.log(
-    `Number ${currentNumber}: ${returnCorrectMessage(currentNumber)}`,
-  );
+	console.log(
+		`Number ${currentNumber}: ${returnCorrectMessage(currentNumber)}`,
+	);
 });
 
+if (!existsSync(resolve(OUTPUTS.OUTPUTS_DIR))) {
+	mkdirSync(resolve(OUTPUTS.OUTPUTS_DIR));
+}
+
 writeFileSync(
-  resolve(OUTPUTS.OUTPUTS_DIR, OUTPUTS.FILENAME),
-  [
-    "Number,Message",
-    shuffledRangeOfNumber
-      .map(
-        (currentNumber) =>
-          `${currentNumber},${returnCorrectMessage(currentNumber)}`,
-      )
-      .join("\n"),
-  ].join("\n"),
+	resolve(OUTPUTS.OUTPUTS_DIR, OUTPUTS.FILENAME),
+	[
+		"Number,Message",
+		shuffledRangeOfNumber
+			.map(
+				(currentNumber) =>
+					`${currentNumber},${returnCorrectMessage(currentNumber)}`,
+			)
+			.join("\n"),
+	].join("\n"),
+	"utf8",
 );

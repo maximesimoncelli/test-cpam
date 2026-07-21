@@ -1,4 +1,4 @@
-import { MESSAGES, type MessagesValues } from "../types/index.ts";
+import { MESSAGES, type MessagesValues } from "../types/index.js";
 
 /**
  * If `currentNumber` is a multiple of 3, returns "Patte"
@@ -12,15 +12,15 @@ import { MESSAGES, type MessagesValues } from "../types/index.ts";
  * @returns MessagesValues | number
  */
 export function returnCorrectMessage(
-  currentNumber: number,
+	currentNumber: number,
 ): MessagesValues | number {
-  if (currentNumber % 3 === 0 && currentNumber % 5 !== 0) {
-    return MESSAGES.PATTE;
-  } else if (currentNumber % 5 === 0 && currentNumber % 3 !== 0) {
-    return MESSAGES.TATRAS;
-  } else if (currentNumber % 3 === 0 && currentNumber % 5 === 0) {
-    return MESSAGES.PATTATRAS;
-  } else {
-    return currentNumber;
-  }
+	if (currentNumber % 3 === 0 && currentNumber % 5 !== 0) {
+		return MESSAGES.PATTE;
+	} else if (currentNumber % 5 === 0 && currentNumber % 3 !== 0) {
+		return MESSAGES.TATRAS;
+	} else if (currentNumber % 3 === 0 && currentNumber % 5 === 0) {
+		return MESSAGES.PATTATRAS;
+	} else {
+		return currentNumber;
+	}
 }

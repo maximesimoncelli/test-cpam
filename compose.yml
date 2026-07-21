@@ -1,3 +1,7 @@
 services:
   pattatras:
-    image:
+    image: "node:24.18"
+    volumes:
+      - ./outputs:/home/node/app/outputs
+    build:
+      dockerfile: ./dockerfile
