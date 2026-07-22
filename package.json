@@ -9,21 +9,44 @@
     "node": ">=24"
   },
   "scripts": {
-    "test": "vitest",
-    "lint": "npx @biomejs/biome check --write",
-    "build": "tsc",
-    "start": "node dist/src/main.js"
+    "app:build": "run-p pattatras:build ui:build",
+    "pattatras:test": "vitest",
+    "pattatras:lint": "npx @biomejs/biome check --write",
+    "pattatras:build": "tsc",
+    "pattatras:start": "node dist/pattatras/main.js",
+    "ui:dev": "vite --config apps/ui/vite.config.ts",
+    "ui:build": "run-p ui:type-check ui:build-only",
+    "ui:preview": "vite --config apps/ui/vite.config.ts preview",
+    "ui:build-only": "vite --config apps/ui/vite.config.ts build",
+    "ui:type-check": "vue-tsc --build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.4",
+    "@primevue/auto-import-resolver": "^5.0.0",
+    "@tsconfig/node24": "^24.0.4",
+    "@types/node": "^24.13.3",
+    "@vitejs/plugin-vue": "^6.0.8",
     "@vitest/coverage-v8": "^4.1.10",
-    "vitest": "^4.1.10"
+    "@vue/tsconfig": "^0.9.1",
+    "npm-run-all2": "^9.0.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.0",
+    "unplugin-vue-components": "^32.1.0",
+    "vite": "^8.1.5",
+    "vite-plugin-vue-devtools": "^8.1.5",
+    "vitest": "^4.1.10",
+    "vue-tsc": "^3.3.7"
   },
   "dependencies": {
+    "@primevue/themes": "^4.0.0",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/lodash.random": "^3.2.9",
     "@types/node": "^26.1.1",
     "lodash": "^4.18.1",
-    "typescript": "^7.0.2"
+    "primevue": "^4.0.0",
+    "tailwindcss-primeui": "^0.6.1",
+    "typescript": "^7.0.2",
+    "vue": "^3.5.40"
   },
   "allowScripts": {
     "core-js@2.6.12": true

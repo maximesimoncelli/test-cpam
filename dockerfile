@@ -5,8 +5,8 @@ RUN chown -R node:node /home/node/app
 USER node
 
 COPY ./package.json ./tsconfig.json ./
-COPY ./src ./src
-COPY ./types ./types
+COPY ./apps/pattatras/src ./apps/pattatras/src
+COPY ./apps/pattatras/types ./apps/pattatras/types
 
 ENV NODE_ENV=production
 

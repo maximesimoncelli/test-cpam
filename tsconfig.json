@@ -1,21 +1,19 @@
 {
     "include": [
-        "src/**/*"
+        "apps/pattatras/src/**/*"
     ],
     "exclude": [
         "**/*.test.ts"
     ],
     "compilerOptions": {
-        "outDir": "./dist",
+        "outDir": "./dist/pattatras",
+        "rootDir": "apps/pattatras/src",
         "types": [
             "node"
         ],
         "paths": {
             "@/": [
-                "./src/"
-            ],
-            "@types/": [
-                "./types/"
+                "./apps/pattatras/src/"
             ]
         }
     }
