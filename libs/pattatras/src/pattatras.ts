@@ -1,13 +1,18 @@
-import { MESSAGES } from "./types/pattatras.js";
+import { MESSAGES, type MessagesValues } from "./types/pattatras.js";
+
 /**
  * Execute the pattatras program on an array of numbers and returns it formatted in an array of objects containing the number and the message
  */
-export function pattatrasObjectPresenter(shuffledRangeOfNumber) {
-    return shuffledRangeOfNumber.map((currentNumber) => ({
-        number: currentNumber,
-        message: returnCorrectMessage(currentNumber),
-    }));
+export function pattatrasObjectPresenter(shuffledRangeOfNumber: number[]): {
+  number: number;
+  message: string | number;
+}[] {
+  return shuffledRangeOfNumber.map((currentNumber) => ({
+    number: currentNumber,
+    message: returnCorrectMessage(currentNumber),
+  }));
 }
+
 /**
  * The main features of this program is as follows:
  *
@@ -30,17 +35,16 @@ export function pattatrasObjectPresenter(shuffledRangeOfNumber) {
  * @param currentNumber number
  * @returns MessagesValues | number
  */
-export function returnCorrectMessage(currentNumber) {
-    if (currentNumber % 3 === 0 && currentNumber % 5 !== 0) {
-        return MESSAGES.PATTE;
-    }
-    else if (currentNumber % 5 === 0 && currentNumber % 3 !== 0) {
-        return MESSAGES.TATRAS;
-    }
-    else if (currentNumber % 3 === 0 && currentNumber % 5 === 0) {
-        return MESSAGES.PATTATRAS;
-    }
-    else {
-        return currentNumber;
-    }
+export function returnCorrectMessage(
+  currentNumber: number,
+): MessagesValues | number {
+  if (currentNumber % 3 === 0 && currentNumber % 5 !== 0) {
+    return MESSAGES.PATTE;
+  } else if (currentNumber % 5 === 0 && currentNumber % 3 !== 0) {
+    return MESSAGES.TATRAS;
+  } else if (currentNumber % 3 === 0 && currentNumber % 5 === 0) {
+    return MESSAGES.PATTATRAS;
+  } else {
+    return currentNumber;
+  }
 }

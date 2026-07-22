@@ -17,7 +17,7 @@
         "./src/*"
       ],
       "@pattatras/*": [
-        "../../apps/pattatras/src/*"
+        "../../libs/pattatras/src/*"
       ]
     },
     // `vue-tsc --build` produces a .tsbuildinfo file for incremental type-checking.

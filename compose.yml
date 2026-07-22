@@ -1,7 +1,7 @@
 services:
   pattatras:
     image: "node:24.18"
-    volumes:
-      - ./outputs:/home/node/app/outputs
     build:
       dockerfile: ./dockerfile
+    ports:
+      - 8080:8080

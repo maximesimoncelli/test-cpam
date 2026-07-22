@@ -27,7 +27,7 @@ export default defineConfig({
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
       "@pattatras": fileURLToPath(
-        new URL("../../apps/pattatras/src", import.meta.url),
+        new URL("../../libs/pattatras/src", import.meta.url),
       ),
     },
   },

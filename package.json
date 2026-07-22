@@ -16,13 +16,13 @@
     "pattatras:start": "node dist/pattatras/main.js",
     "ui:dev": "vite --config apps/ui/vite.config.ts",
     "ui:build": "run-p ui:type-check ui:build-only",
-    "ui:preview": "vite --config apps/ui/vite.config.ts preview",
+    "ui:preview": "npx vite --config apps/ui/vite.config.ts preview",
     "ui:build-only": "vite --config apps/ui/vite.config.ts build",
     "ui:type-check": "vue-tsc --build"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.4",
-    "@primevue/auto-import-resolver": "^5.0.0",
+    "@primevue/auto-import-resolver": "^4.0.0",
     "@tsconfig/node24": "^24.0.4",
     "@types/node": "^24.13.3",
     "@vitejs/plugin-vue": "^6.0.8",
