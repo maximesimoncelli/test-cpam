@@ -51,7 +51,7 @@ See the [usage](#usage) section for the next steps to use the application.
 
 #### Pre-requisites
 
-- [Node v24.18 minimum](https://nodejs.org/fr/download). Other versions are untested.
+- [Node](https://nodejs.org/fr/download). Versions 20.xx, 22.xx and 24.xx should all be supported, but 24.xx is the default target.
 - [Git](https://git-scm.com/install/windows). Make sure you download the right version for your system (windows, linux, mac os,)
 
 #### Steps
@@ -94,6 +94,10 @@ When you have successfully launched the application, head to http://localhost:41
   ![a screenshot of the table containing the results of the application](docs/table.png)
 
 - You can now navigate through all numbers using the pagination at the footer of the table. You can also sort the "Number" column by clicking on it. If you want, you can start the program again by clicking on the main button, which will now show "Restart the Pattatras Application".
+
+## Architecture
+
+See [Architecture.md](./ARCHITECTURE.md)
 
 ## Licence
 

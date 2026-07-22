@@ -11,7 +11,8 @@
   "scripts": {
     "app:build": "run-p pattatras:build ui:build",
     "app:lint": "npx @biomejs/biome check --write",
-    "pattatras:test": "vitest",
+    "app:check": "run-p pattatras:test ui:type-check app:lint",
+    "pattatras:test": "vitest --run",
     "pattatras:build": "tsc",
     "pattatras:start": "node dist/pattatras/main.js",
     "ui:dev": "vite --config apps/ui/vite.config.ts",
