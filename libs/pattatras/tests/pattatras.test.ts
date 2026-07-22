@@ -1,7 +1,6 @@
 import _ from "lodash";
 import { beforeAll, describe, expect, test } from "vitest";
-import { returnCorrectMessage } from "../src/print-correct-message.js";
-import { MESSAGES } from "../types/index.js";
+import { MESSAGES, returnCorrectMessage } from "../src/index";
 
 const { range, shuffle } = _;
 

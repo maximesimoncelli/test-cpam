@@ -6,7 +6,7 @@
   "type": "module",
   "main": "src/main.ts",
   "engines": {
-    "node": ">=24"
+    "node": ">=24.18.0"
   },
   "scripts": {
     "app:build": "run-p pattatras:build ui:build",
