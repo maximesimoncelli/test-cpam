@@ -1,36 +1,41 @@
 <script setup lang="ts">
-import { pattatrasObjectPresenter, shuffledRangeOfNumber } from '@pattatras/index';
-import { computed, ref } from 'vue';
+import {
+	pattatrasObjectPresenter,
+	shuffledRangeOfNumber,
+} from "@pattatras/index";
+import { computed, ref } from "vue";
 
 /**
  * Pattatras Business Logic
  */
 let computedArrayForPattatras = ref<Array<{
-  number: number;
-  message: string | number;
+	number: number;
+	message: string | number;
 }> | null>(null);
 
 const executePattatras = () => {
-  computedArrayForPattatras.value = pattatrasObjectPresenter(shuffledRangeOfNumber());
-}
+	computedArrayForPattatras.value = pattatrasObjectPresenter(
+		shuffledRangeOfNumber(),
+	);
+};
 
 /**
  * Pattatras UI
  */
 const helpText = [
-  "If the number is a multiple of 3, it shows the message 'Patte'.",
-  "If the number is a multiple of 5, it shows the message 'Tatras'.",
-  "If the number is both a multiple of 5 and 3, it shows the message 'Pattatras'.",
-  "In every other case, it shows the the number."
-]
+	"If the number is a multiple of 3, it shows the message 'Patte'.",
+	"If the number is a multiple of 5, it shows the message 'Tatras'.",
+	"If the number is both a multiple of 5 and 3, it shows the message 'Pattatras'.",
+	"In every other case, it shows the the number.",
+];
 
 const buttonText = computed(() => {
-  if (!computedArrayForPattatras.value) {
-    return "Start the Pattatras Application"
-  } else {
-    return "Restart the Pattatras Application"
-  }
-})
+	if (!computedArrayForPattatras.value) {
+		return "Start the Pattatras Application";
+	} else {
+		return "Restart the Pattatras Application";
+	}
+});
 </script>
 
 <template>

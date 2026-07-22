@@ -10,8 +10,8 @@
   },
   "scripts": {
     "app:build": "run-p pattatras:build ui:build",
+    "app:lint": "npx @biomejs/biome check --write",
     "pattatras:test": "vitest",
-    "pattatras:lint": "npx @biomejs/biome check --write",
     "pattatras:build": "tsc",
     "pattatras:start": "node dist/pattatras/main.js",
     "ui:dev": "vite --config apps/ui/vite.config.ts",

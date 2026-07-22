@@ -26,8 +26,8 @@ The main features of this program are as follows:
 
 #### Pre-requisites
 
-- Docker and Docker compose. If you are unsure, the Docker Desktop application will be enough: https://www.docker.com/products/docker-desktop/
-- Git: https://git-scm.com/install/windows. Depending on your system (Windows, Linux, MacOs), make sure you download the right version for your system
+- Docker and Docker compose. If you are unsure, the [Docker Desktop application](https://www.docker.com/products/docker-desktop/) will be enough.
+- (Optional) [Git](https://git-scm.com/install/windows). Depending on your system (Windows, Linux, MacOs), make sure you download the right version for your system
 
 #### Steps
 
@@ -37,8 +37,9 @@ The main features of this program are as follows:
 git clone https://github.com/maximesimoncelli/test-cpam.git
 ```
 
-> Alternatively, you can simply download the repository [here](https://github.com/maximesimoncelli/test-cpam) and extract it in the folder of your choice.
-> ![alt text](docs/download.png)
+- Alternatively, you can simply download the repository [here](https://github.com/maximesimoncelli/test-cpam) and extract it in the folder of your choice.
+
+![alt text](docs/download.png)
 
 - Start the [container](https://www.docker.com/resources/what-container/) by opening a terminal in the folder named `test-cpam` you either downloaded or cloned via terminal and using the command `docker compose up -d`.
 
@@ -78,6 +79,8 @@ npm install
 | `npm run app:build`      | builds the application                           |
 | `npm run ui:preview`     | launches the build at http://localhost:4173      |
 | `npm run pattatras:test` | launches the test suite                          |
+
+See the [usage](#usage) section for the next steps to use the application.
 
 ## Usage
 
