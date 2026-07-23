@@ -2,6 +2,8 @@
 
 [![Node.js CI](https://github.com/maximesimoncelli/test-cpam/actions/workflows/CI.yml/badge.svg)](https://github.com/maximesimoncelli/test-cpam/actions/workflows/CI.yml)
 
+Visit https://maximesimoncelli.github.io/test-cpam/
+
 The main features of this program are as follows:
 
 > Given a range of randomly arranged numbers between 1 and 6457 included
