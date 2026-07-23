@@ -10,6 +10,7 @@ import vueDevTools from "vite-plugin-vue-devtools";
 // https://vite.dev/config/
 export default defineConfig({
   root: "apps/ui", // This is relative to the root
+  base: process.env.NODE_ENV === "production" ? "/test-cpam/" : "/",
   plugins: [
     vue(),
     vueDevTools(),
